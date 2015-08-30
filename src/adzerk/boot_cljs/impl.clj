@@ -55,10 +55,10 @@
                   (when (warning-enabled? warning-type)
                     (swap! counter inc)))]
     (try
-      (time (build
+      (build
         input-path
         (assoc opts :warning-handlers [default-warning-handler handler])
-        stored-env))
+        stored-env)
       (catch Exception e
         (handle-ex e (:directories pod/env))))
     {:warnings  @counter
