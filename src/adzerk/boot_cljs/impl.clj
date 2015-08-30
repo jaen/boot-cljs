@@ -60,7 +60,7 @@
         (assoc opts :warning-handlers [default-warning-handler handler])
         stored-env))
       (catch Exception e
-        (handle-ex e directories)))
+        (handle-ex e (:directories pod/env))))
     {:warnings  @counter
      :dep-order (dep-order stored-env opts)}))
 
