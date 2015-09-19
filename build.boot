@@ -12,16 +12,16 @@
          '[adzerk.boot-cljs   :refer [cljs]]
          '[pandeiro.boot-http :refer [serve]])
 
-(def +version+ "1.7.48-3")
+(def +version+ "0.0-SNAPSHOT")
 
 (bootlaces! +version+)
 
 (task-options!
-  pom {:project     'adzerk/boot-cljs
+  pom {:project     'org.cojars.jaen/boot-cljs
        :version     +version+
        :description "Boot task to compile ClojureScript applications."
-       :url         "https://github.com/adzerk/boot-cljs"
-       :scm         {:url "https://github.com/adzerk/boot-cljs"}
+       :url         "https://github.com/jaen/boot-cljs"
+       :scm         {:url "https://github.com/jaen/boot-cljs"}
        :license     {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}})
 
 (deftask run-tests

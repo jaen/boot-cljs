@@ -18,8 +18,7 @@
   "ClojureScript dependency to load in the pod if
    none is provided via project"
   (delay (remove pod/dependency-loaded?
-                 [['org.clojure/clojurescript cljs-version]
-                  ['ns-tracker "0.3.0"]])))
+                 [['ns-tracker "0.3.0"]])))
 
 (def ^:private QUALIFIERS
   "Order map for well-known Clojure version qualifiers."
